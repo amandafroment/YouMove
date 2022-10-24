@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const exercisesCtrl = require("../controllers/exercises");
 
-router.get("/workout/:id/exericse", isLoggedIn, exercisesCtrl.show);
+// router.get("/workout/:id/exercise", isLoggedIn, exercisesCtrl.show);
 router.get("/workout/:id/exercise/new", isLoggedIn, exercisesCtrl.new);
 router.post("/workout/:id/exercise", isLoggedIn, exercisesCtrl.create);
 

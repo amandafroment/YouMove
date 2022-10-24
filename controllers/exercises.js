@@ -6,16 +6,13 @@ const Exercise = require("../models/exercise");
 module.exports = {
   new: newExercise,
   create,
-  show,
 };
 
 function newExercise(req, res) {
-  const exercise = new Exercise(req.body);
   Workout.findById(req.params.id, function (err, workout) {
     res.render("exercise/new", {
       user: req.user,
       workout: workout,
-      exercise: exercise,
     });
   });
 }
@@ -23,23 +20,13 @@ function newExercise(req, res) {
 function create(req, res) {
   console.log(req.params, "params");
   const exercise = new Exercise(req.body);
+  exercise.workout = req.params.id;
   console.log(exercise, "exercise");
   exercise.save(function (err) {
     if (err) return res.redirect("/workout");
-    res.redirect(`/workout/${req.params.id}/exercise`);
+    res.redirect(`/workout/${req.params.id}`);
   });
   // do something to add it to my workout show page
-}
-
-function show(req, res) {
-  Workout.findById(req.params.id, function (err, workout) {
-    res.render("workouts/show", {
-      user: req.user,
-      workout: workout,
-      exercise: exercise,
-    });
-  });
-  console.log(workout, "workout");
 }
 
 //when you have a get request, that is tied to a page (aka the view), therefor you render that view

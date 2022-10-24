@@ -28,6 +28,34 @@
       dateObj.getUTCDate()%> <% }%>
     </h2>
     <div>
+      <% if (exercises.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Weights Used</th>
+            <th>Additional Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% exercises.forEach(function(e){ %>
+          <tr>
+            <td><%= e.name %></td>
+            <td><%= e.sets %></td>
+            <td><%= e.reps %></td>
+            <td><%= e.weights %></td>
+            <td><%= e.notes %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h5>No Exercises Yet</h5>
+      <% } %>
+    </div>
+    <div>
       <button type="submit" class="create-workout-btn">
         <a href="/workout/<%= workout._id %>/exercise/new"> Add An Exercise</a>
       </button>
