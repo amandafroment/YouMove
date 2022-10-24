@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <h1 class="logo">YOUMOVE</h1>
+        <a href="" class="">Workouts</a>
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+            <a href="/logout">Log Out</a>
+            <% } %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div class="workouts-container">
+        <div class="workouts-center-div">
+          <h2>Workouts</h2>
+          <% if (workouts) { %>
+          <table>
+            <thead>
+              <tr>
+                <th>Workout</th>
+                <th>Date Created</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% workouts.forEach(function(workout) { %>
+              <tr>
+                <td>
+                  <a href="/workout/<%= workout._id %>"><%= workout.name %></a>
+                </td>
+                <% dateObj = new Date(workout.date) %>
+                <td>
+                  <%if (!isNaN(dateObj)) {%> <%= dateObj.getUTCFullYear() %>/<%=
+                  dateObj.getUTCMonth() + 1%>/<%= dateObj.getUTCDate()%> <% }%>
+                </td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+          <% } else { %>
+          <h5>No Workouts Yet</h5>
+          <% } %>
+        </div>
+      </div>
+      <div class="new-workout-container">
+        <div class="create-workout-center-div">
+          <h2>Add A Workout</h2>
+          <form class="form" method="POST" action="/users/workout">
+            <label>Workout Name: <input type="text" name="name" /> </label>
+            <label>Date: <input type="date" name="date" /></label>
+            <button type="submit" class="create-workout-btn">
+              New Workout
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- <footer></footer> -->
+  </body>
+</html>

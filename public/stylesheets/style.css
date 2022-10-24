@@ -1,8 +1,65 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+
+.navbar-fixed {
+  background-color: #ecd5e6;
+  height: 100px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  padding-top: 10px;
+  width: 95%;
+}
+
+.logo {
+  font-size: 25px;
+  color: #b589ab;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
 }
 
 a {
-  color: #00B7FF;
+  font-size: 20px;
+  text-decoration: none;
+  color: #b589ab;
 }
+
+a:hover {
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 1000px;
+  width: 100%;
+  background-color: green;
+}
+
+.workouts-container {
+  width: 50%;
+  height: 100%;
+  background-color: purple;
+}
+
+.new-workout-container {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
+
+/* footer {
+  height: 100px;
+  background-color: #b589ab;
+} */
