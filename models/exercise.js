@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 
 const exerciseSchema = new Schema({
   name: String,
-  date: Date,
+  sets: Number,
+  reps: Number,
+  weights: Number,
+  notes: String,
   workout: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Workout",

@@ -27,5 +27,10 @@
       dateObj.getUTCFullYear() %>/<%= dateObj.getUTCMonth() + 1%>/<%=
       dateObj.getUTCDate()%> <% }%>
     </h2>
+    <div>
+      <button type="submit" class="create-workout-btn">
+        <a href="/workout/<%= workout._id %>/exercise/new"> Add An Exercise</a>
+      </button>
+    </div>
   </body>
 </html>

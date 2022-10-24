@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <h1 class="logo">YOUMOVE</h1>
+        <a href="/users" class="">Workouts</a>
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+            <a href="/logout">Log Out</a>
+            <% } %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="new-exercise-container">
+      <div class="">
+        <h2>Add A Workout</h2>
+        <form
+          class="form"
+          method="POST"
+          action="/workout/<%= workout._id %>/exercise"
+        >
+          <label>Exercise: <input type="text" name="name" /> </label>
+          <label>Sets: <input type="number" name="sets" /></label>
+          <label>Reps: <input type="number" name="reps" /></label>
+          <label
+            >Weights Used (lb): <input type="number" name="weights"
+          /></label>
+          <label>Additional Notes: <input type="text" name="notes" /></label>
+
+          <button type="submit" class="create-workout-btn">
+            Add New Exercise
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
