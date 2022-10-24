@@ -11,12 +11,9 @@ function index(req, res, next) {
   if (!req.isAuthenticated()) {
     res.redirect("/");
   }
-  console.log(req.user, "user");
   Workout.find(
     { user: mongoose.Types.ObjectId(req.user._id) },
     function (err, workouts) {
-      console.log(workouts, "workouts");
-      console.log(err, "error");
       res.render("users/user", {
         user: req.user,
         workouts: workouts,

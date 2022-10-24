@@ -47,6 +47,14 @@
             <td><%= e.reps %></td>
             <td><%= e.weights %></td>
             <td><%= e.notes %></td>
+            <td>
+              <form
+                action="/exercise/<%= e._id%>/<%= workout._id %>?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit">Delete</button>
+              </form>
+            </td>
           </tr>
           <% }); %>
         </tbody>

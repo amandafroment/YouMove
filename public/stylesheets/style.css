@@ -3,6 +3,42 @@ body {
   margin: 0px;
 }
 
+.index {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  width: 100%;
+  background-color: #b589ab;
+}
+
+.index-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 25px;
+  background-color: white;
+  height: 25%;
+  width: 50%;
+  margin: 0px;
+  text-align: center;
+}
+
+.index-p {
+  margin: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.first-paragraph {
+  font-size: 30px;
+  font-weight: 500;
+}
+
 .navbar-fixed {
   background-color: #ecd5e6;
   height: 100px;
@@ -39,12 +75,11 @@ a:hover {
   color: white;
 }
 
-main {
+.user-homepage {
   display: flex;
   flex-direction: row;
   height: 1000px;
   width: 100%;
-  background-color: green;
 }
 
 .workouts-container {
