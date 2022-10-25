@@ -44,6 +44,14 @@
                   <%if (!isNaN(dateObj)) {%> <%= dateObj.getUTCFullYear() %>/<%=
                   dateObj.getUTCMonth() + 1%>/<%= dateObj.getUTCDate()%> <% }%>
                 </td>
+                <td>
+                  <form
+                    action="/users/workout/<%= workout._id %>"
+                    method="POST"
+                  >
+                    <button type="submit">Delete</button>
+                  </form>
+                </td>
               </tr>
               <% }); %>
             </tbody>

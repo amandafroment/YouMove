@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 module.exports = {
   index,
   addWorkout,
+  deleteWorkout,
 };
 
 function index(req, res, next) {
@@ -35,4 +36,14 @@ function addWorkout(req, res) {
     console.log(workout);
     res.redirect("/users");
   });
+}
+
+function deleteWorkout(req, res) {
+  console.log(req.params, "deletefunction");
+
+  Workout.findById(req.params.id, function (err, workout) {
+    console.log(workout, "delete workout");
+    workout.delete(function (err) {});
+  });
+  res.redirect(`/users`);
 }
