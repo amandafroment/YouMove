@@ -4,7 +4,14 @@ const exercisesCtrl = require("../controllers/exercises");
 
 router.get("/workout/:id/exercise/new", isLoggedIn, exercisesCtrl.new);
 router.post("/workout/:id/exercise", isLoggedIn, exercisesCtrl.create);
-router.delete("/exercise/:id/:id", isLoggedIn, exercisesCtrl.delete);
+router.post("/exercise/:id/:id", isLoggedIn, exercisesCtrl.delete);
+router.post("/:eid/:wid", isLoggedIn, exercisesCtrl.edit);
+router.post(
+  "/exercise/workout/:eid/:wid/exercise",
+  isLoggedIn,
+  exercisesCtrl.update
+);
+router.post("/exercise/edit/:eid/:wid", isLoggedIn, exercisesCtrl.edit);
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

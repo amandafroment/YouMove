@@ -23,8 +23,8 @@
     </div>
     <main class="user-homepage">
       <div class="workouts-container">
+        <h2 class="header">Workouts</h2>
         <div class="workouts-center-div">
-          <h2>Workouts</h2>
           <% if (workouts) { %>
           <table>
             <thead>
@@ -55,10 +55,14 @@
       </div>
       <div class="new-workout-container">
         <div class="create-workout-center-div">
-          <h2>Add A Workout</h2>
+          <h2 class="workout-header">Add A Workout</h2>
           <form class="form" method="POST" action="/users/workout">
-            <label>Workout Name: <input type="text" name="name" /> </label>
-            <label>Date: <input type="date" name="date" /></label>
+            <label
+              >Workout Name: <input type="text" name="name" required />
+            </label>
+            <label
+              >Date: <input class="date" type="date" name="date" required
+            /></label>
             <button type="submit" class="create-workout-btn">
               New Workout
             </button>

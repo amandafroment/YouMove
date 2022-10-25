@@ -8,6 +8,8 @@ module.exports = {
   new: newExercise,
   create,
   delete: deleteExercise,
+  edit: editExercise,
+  update,
 };
 
 function newExercise(req, res) {
@@ -29,36 +31,49 @@ function create(req, res) {
 }
 
 function deleteExercise(req, res) {
-  console.log(req.params.id, "workout and exercise");
+  console.log(req.params, "deletefunction");
   Exercise.findOneAndDelete(req.params.id, function (err, exercise) {
-    console.log(exercise, "exercised");
     exercise.delete(function (err) {});
   });
   res.redirect(`/workout/${req.params.id}`);
 }
 
-// function deleteExercise(req, res, next) {
-//   Exercise.findOne({ "e._id": req.params.id }, function (err, workout) {
-//     workout.exercise(req.params.id).remove();
-//     workout.save(function (err) {
-//       res.redirect(`/workout/${req.params.id}`);
-//     });
-//   });
-// }
+function editExercise(req, res) {
+  console.log(req.params, "edit");
+  let eid = req.params.eid;
+  let id = req.params.wid;
+  let exercise;
+  Exercise.findById(req.params.eid, function (err, exercise) {
+    exercise = exercise;
+    res.render(`./exercise/edit`, {
+      exercise,
+      id,
+      eid,
+    });
+  });
+}
+
+function update(req, res) {
+  Exercise.findOneAndUpdate(req.params.eid, req.body);
+  Exercise.findByIdAndUpdate(
+    req.params.eid,
+    {
+      name: req.body.name,
+      sets: req.body.sets,
+      reps: req.body.reps,
+      weights: req.body.weights,
+      notes: req.body.notes,
+    },
+    function (err, docs) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Updated User : ", docs);
+      }
+    }
+  );
+  res.redirect(`/workout/${req.params.wid}`);
+}
 
 //when you have a get request, that is tied to a page (aka the view), therefor you render that view
 //when you have a post request, there is no view for it(whether its a post, update, delete) so it is always a redirect to a route with a view
-
-// function deleteExercise(req, res, next) {
-//   Workout.findById(req.params.id, function (err, workout) {
-//     Exercise.find(
-//       { workout: mongoose.Types.ObjectId(workout._id) },
-//       function (err, exercises) {
-//         workout.exercise.id(req.params.id).remove();
-//         workout.save(function (err) {
-//           res.redirect(`/workout/${req.params.id}`);
-//         });
-//       }
-//     );
-//   });
-// }

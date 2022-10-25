@@ -49,10 +49,18 @@
             <td><%= e.notes %></td>
             <td>
               <form
-                action="/exercise/<%= e._id%>/<%= workout._id %>?_method=DELETE"
+                action="/exercise/<%= e._id%>/<%= workout._id %>"
                 method="POST"
               >
                 <button type="submit">Delete</button>
+              </form>
+            </td>
+            <td>
+              <form
+                action="/exercise/edit/<%= e._id%>/<%= workout._id %>"
+                method="POST"
+              >
+                <button type="submit">Edit Exercise</button>
               </form>
             </td>
           </tr>

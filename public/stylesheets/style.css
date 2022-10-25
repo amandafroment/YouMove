@@ -1,6 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0px;
+  background-color: #6d738e;
 }
 
 .index {
@@ -8,7 +9,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 1000px;
+  height: 1200px;
   width: 100%;
   background-color: #b589ab;
   background-image: url("/images/yogastretch.jpg");
@@ -29,11 +30,12 @@ body {
   width: 50%;
   margin: 0px;
   text-align: center;
-  background-color: #b589ab;
+  background-color: #b9a1a9;
+  border: solid 2px black;
 }
 
 .index-p {
-  margin: 5px;
+  margin: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 300;
   font-size: 25px;
@@ -88,17 +90,116 @@ a:hover {
 }
 
 .workouts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
-  background-color: purple;
+  background-color: #6d738e;
+}
+
+.workouts-center-div {
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+thead {
+  text-align: center;
+}
+
+th {
+  font-size: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 60px;
+  width: 50%;
+  background-color: #b589ab;
+  border-radius: 10px;
 }
 
 .new-workout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
-  background-color: blue;
+  background-color: #b589ab;
 }
 
+.create-workout-center-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 58%;
+  width: 50%;
+  background-color: #b9a1a9;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 20px;
+  margin: 10px;
+  align-self: center;
+}
+
+input {
+  height: 25px;
+  font-size: 20px;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.workout-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 60px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.create-workout-btn {
+  font-size: 20px;
+  width: 50%;
+  height: 35px;
+  margin-top: 10px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #b589ab;
+}
 /* footer {
   height: 100px;
   background-color: #b589ab;
