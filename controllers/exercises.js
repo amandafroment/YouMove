@@ -32,10 +32,13 @@ function create(req, res) {
 
 function deleteExercise(req, res) {
   console.log(req.params, "deletefunction");
-  Exercise.findOneAndDelete(req.params.id, function (err, exercise) {
+  let eid = req.params.eid;
+
+  Exercise.findById(req.params.eid, function (err, exercise) {
+    console.log(exercise, "delete exercise");
     exercise.delete(function (err) {});
   });
-  res.redirect(`/workout/${req.params.id}`);
+  res.redirect(`/workout/${req.params.wid}`);
 }
 
 function editExercise(req, res) {

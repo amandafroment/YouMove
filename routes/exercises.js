@@ -4,7 +4,7 @@ const exercisesCtrl = require("../controllers/exercises");
 
 router.get("/workout/:id/exercise/new", isLoggedIn, exercisesCtrl.new);
 router.post("/workout/:id/exercise", isLoggedIn, exercisesCtrl.create);
-router.post("/exercise/:id/:id", isLoggedIn, exercisesCtrl.delete);
+router.post("/exercise/:eid/:wid", isLoggedIn, exercisesCtrl.delete);
 router.post("/:eid/:wid", isLoggedIn, exercisesCtrl.edit);
 router.post(
   "/exercise/workout/:eid/:wid/exercise",

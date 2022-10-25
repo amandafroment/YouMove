@@ -10,9 +10,7 @@ module.exports = {
 };
 
 function show(req, res) {
-  console.log(req.params.id, "req");
   Workout.findById(req.params.id, function (err, workout) {
-    console.log(workout, "workout");
     Exercise.find(
       { workout: mongoose.Types.ObjectId(workout._id) },
       function (err, exercises) {
