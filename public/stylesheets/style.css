@@ -87,6 +87,9 @@ a:hover {
   flex-direction: row;
   height: 1000px;
   width: 100%;
+  background-image: url("/images/twopinkdumbells.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .workouts-container {
@@ -96,7 +99,7 @@ a:hover {
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: #6d738e;
+  /* background-color: #6d738e; */
 }
 
 .workouts-center-div {
@@ -141,7 +144,7 @@ th {
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: #b589ab;
+  /* background-color: #b589ab; */
 }
 
 .create-workout-center-div {

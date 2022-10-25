@@ -40,7 +40,6 @@ function addWorkout(req, res) {
 
 function deleteWorkout(req, res) {
   console.log(req.params, "deletefunction");
-
   Workout.findById(req.params.id, function (err, workout) {
     console.log(workout, "delete workout");
     workout.delete(function (err) {});
