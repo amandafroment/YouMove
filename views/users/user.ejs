@@ -23,35 +23,34 @@
     </div>
     <main class="user-homepage">
       <div class="workouts-container">
-        <h2 class="header">Workouts</h2>
+        <h2 class="header">WORKOUTS</h2>
         <div class="workouts-center-div">
           <% if (workouts) { %>
           <table>
-            <thead>
-              <tr>
-                <th>Workout</th>
-                <th>Date Created</th>
-              </tr>
-            </thead>
             <tbody>
               <% workouts.forEach(function(workout) { %>
               <tr>
-                <td>
-                  <a href="/workout/<%= workout._id %>"><%= workout.name %></a>
+                <td class="left-corner-brdr">
+                  <a class="workout-anchor" href="/workout/<%= workout._id %>"
+                    ><%= workout.name %></a
+                  >
                 </td>
                 <% dateObj = new Date(workout.date) %>
                 <td>
                   <%if (!isNaN(dateObj)) {%> <%= dateObj.getUTCFullYear() %>/<%=
                   dateObj.getUTCMonth() + 1%>/<%= dateObj.getUTCDate()%> <% }%>
                 </td>
-                <td>
+                <td class="right-corner-brdr">
                   <form
                     action="/users/workout/<%= workout._id %>"
                     method="POST"
                   >
-                    <button type="submit">Delete</button>
+                    <button class="delete-btn" type="submit">DELETE</button>
                   </form>
                 </td>
+              </tr>
+              <tr class="spacer">
+                <td></td>
               </tr>
               <% }); %>
             </tbody>
@@ -63,17 +62,13 @@
       </div>
       <div class="new-workout-container">
         <div class="create-workout-center-div">
-          <h2 class="workout-header">Add A Workout</h2>
+          <h2 class="workout-header">NEW WORKOUT</h2>
           <form class="form" method="POST" action="/users/workout">
+            <label>NAME <input type="text" name="name" required /> </label>
             <label
-              >Workout Name: <input type="text" name="name" required />
-            </label>
-            <label
-              >Date: <input class="date" type="date" name="date" required
+              >DATE <input class="date" type="date" name="date" required
             /></label>
-            <button type="submit" class="create-workout-btn">
-              New Workout
-            </button>
+            <button type="submit" class="create-workout-btn">SUBMIT</button>
           </form>
         </div>
       </div>
