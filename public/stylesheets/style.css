@@ -26,13 +26,12 @@ body {
   align-items: center;
   gap: 0px;
   padding: 25px;
-  background-color: white;
   height: 25%;
   width: 50%;
   margin: 0px;
   text-align: center;
   background-color: #b9a1a9;
-  border: solid 2px black;
+  border: solid 2px #5b4c64;
 }
 
 .index-p {
@@ -40,6 +39,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 300;
   font-size: 25px;
+  color: #3a2d42;
 }
 
 .first-paragraph {
@@ -391,6 +391,7 @@ h5 {
   justify-content: center;
   align-items: center;
   align-content: center;
+  text-transform: uppercase;
 }
 
 .exercise-btn {

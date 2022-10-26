@@ -19,15 +19,39 @@
       <div class="exercise-form">
         <h2 class="header">EDIT <%= exercise.name %></h2>
         <form
-          class="form exercise-new"
+          class="form"
           action="/exercise/workout/<%=eid%>/<%= id %>/exercise"
           method="POST"
         >
-          <label>EXERCISE </label> <input type="text" name="name" required />
-          <label>SETS </label><input type="number" name="sets" required />
-          <label>REPS </label><input type="number" name="reps" required />
-          <label>WEIGHTS (LB) </label><input type="number" name="weights" />
-          <label>ADDITIONAL NOTES </label><input type="text" name="notes" />
+          <label>EXERCISE </label>
+          <input
+            type="text"
+            value="<%= exercise.name %>"
+            name="name"
+            required
+          />
+          <label>SETS </label
+          ><input
+            type="number"
+            name="sets"
+            value="<%= exercise.sets %>"
+            required
+          />
+          <label>REPS </label
+          ><input
+            type="number"
+            name="reps"
+            value="<%= exercise.reps %>"
+            required
+          />
+          <label>WEIGHTS (LB) </label
+          ><input
+            type="number"
+            name="weights"
+            value="<%= exercise.weights %>"
+          />
+          <label>ADDITIONAL NOTES </label
+          ><input type="text" name="notes" value="<%= exercise.notes %>" />
 
           <button type="submit" class="create-workout-btn update-btn">
             UPDATE EXERCISE
