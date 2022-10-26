@@ -114,6 +114,7 @@ table {
   color: #ecd5e6;
   border-collapse: collapse;
   border-spacing: 0 15px;
+  text-transform: uppercase;
 }
 
 table td {
@@ -148,7 +149,7 @@ table td {
 .delete-btn {
   font-size: 20px;
   height: 35px;
-  width: 150px;
+  width: 125px;
   border-radius: 10px;
   background-color: #ecd5e6;
   color: #757a92;
@@ -235,6 +236,7 @@ input {
   background-color: white;
   color: #5b4c64;
   border: 2px solid #5b4c64;
+  text-transform: uppercase;
 }
 
 .date {
@@ -278,25 +280,46 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 70%;
-  background-color: white;
+  padding: 50px;
+  background-color: rgb(185, 161, 169, 0.9);
+  border-radius: 10px;
+  border: 2px solid #5b4c64;
 }
 
 .workout-show-headers {
   display: flex;
   flex-direction: row;
-  /* align-items: baseline; */
   justify-content: center;
   align-content: center;
   gap: 50px;
-  font-size: 15px;
   height: 60px;
   width: 40%;
   background-color: #b589ab;
   border-radius: 10px;
-  color: #5b4c64;
+  color: #ecd5e6;
   border: 2px solid #5b4c64;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.h1-show {
+  align-self: center;
+  font-size: 25px;
+}
+
+.date-header {
+  font-size: 15px;
+  align-self: center;
 }
 
 .new-exercise-btn {
   align-self: center;
+  font-size: 22px;
+  width: 25%;
+  height: 45px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #5b4c64;
+  color: #ecd5e6;
+  border: 0px;
 }

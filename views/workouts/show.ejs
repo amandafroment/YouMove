@@ -24,7 +24,7 @@
     <main class="workout-show-page-main">
       <div class="workout-show-container">
         <div class="workout-show-headers">
-          <h1><%= workout.name %></h1>
+          <h1 class="h1-show"><%= workout.name %></h1>
           <h2 class="date-header">
             <% dateObj = new Date(workout.date) %> <%if (!isNaN(dateObj)) {%>
             <%= dateObj.getUTCFullYear() %>/<%= dateObj.getUTCMonth() + 1%>/<%=
@@ -56,7 +56,7 @@
                     action="/exercise/<%= e._id%>/<%= workout._id %>"
                     method="POST"
                   >
-                    <button type="submit">DELETE</button>
+                    <button class="delete-btn" type="submit">DELETE</button>
                   </form>
                 </td>
                 <td>
@@ -64,9 +64,12 @@
                     action="/exercise/edit/<%= e._id%>/<%= workout._id %>"
                     method="POST"
                   >
-                    <button type="submit">EDIT</button>
+                    <button class="delete-btn" type="submit">EDIT</button>
                   </form>
                 </td>
+              </tr>
+              <tr class="spacer">
+                <td></td>
               </tr>
               <% }); %>
             </tbody>
