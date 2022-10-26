@@ -1,7 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0px;
-  background-color: #6d738e;
+  /* background-color: #6d738e; */
   height: 100%;
 }
 
@@ -100,7 +100,6 @@ a:hover {
   align-items: center;
   width: 50%;
   height: 100%;
-  /* background-color: #6d738e; */
 }
 
 .workouts-center-div {
@@ -259,11 +258,21 @@ button:hover {
   color: white;
   border: 2px solid #5b4c64;
 }
-/* footer {
-  height: 100px;
-  background-color: #b589ab;
-  darker blue grey: #757a92;
-  sunset purple: #988e9e;
-  sunset pink: #c8abb0;
-  light grey purple: #aeadb7;
-} */
+
+.workout-show-page-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  width: 100%;
+  background-image: url(/images/dbbw.jpg);
+  opacity: 0.8;
+  background-color: #5b4c64;
+  background-size: cover;
+}
+
+.workout-show-container {
+  width: 70%;
+  background-color: white;
+}
