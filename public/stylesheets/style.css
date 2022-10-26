@@ -173,6 +173,7 @@ table td {
   border-radius: 10px;
   color: #ecd5e6;
   border: 2px solid #5b4c64;
+  text-transform: uppercase;
 }
 
 .new-workout-container {
@@ -233,7 +234,7 @@ input {
   text-align: center;
   font-size: 18px;
   resize: none;
-  background-color: white;
+  background-color: #f7f1f5;
   color: #5b4c64;
   border: 2px solid #5b4c64;
   text-transform: uppercase;
@@ -255,6 +256,10 @@ input {
   border: 0px;
 }
 
+.new-exercise-anchor {
+  color: #ecd5e6;
+}
+
 button:hover {
   background-color: #b589ab;
   color: white;
@@ -269,8 +274,7 @@ button:hover {
   height: 1000px;
   width: 100%;
   background-image: url(/images/dbbw.jpg);
-  opacity: 0.8;
-  background-color: #5b4c64;
+  opacity: 0.95;
   background-size: cover;
 }
 
@@ -281,7 +285,7 @@ button:hover {
   align-items: center;
   width: 70%;
   padding: 50px;
-  background-color: rgb(185, 161, 169, 0.9);
+  background-color: rgb(185, 161, 169, 0.8);
   border-radius: 10px;
   border: 2px solid #5b4c64;
 }
@@ -312,6 +316,27 @@ button:hover {
   align-self: center;
 }
 
+.workout-tr-headers th {
+  padding-bottom: 15px;
+  text-align: center;
+  color: #5b4c64;
+}
+
+.workout-show-table td {
+  text-align: center;
+  color: #5b4c64;
+  background-color: #f7f1f5;
+}
+
+.spacer td {
+  background: transparent;
+  padding: 5px 30px;
+}
+
+.notes {
+  font-size: 15px;
+}
+
 .new-exercise-btn {
   align-self: center;
   font-size: 22px;
@@ -321,5 +346,58 @@ button:hover {
   border-radius: 10px;
   background-color: #5b4c64;
   color: #ecd5e6;
+
   border: 0px;
+}
+
+h5 {
+  font-size: 25px;
+  text-align: center;
+  color: #5b4c64;
+}
+
+.bottom-h5 {
+  margin-bottom: 75px;
+  font-size: 20px;
+}
+
+.new-exercise-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  width: 100%;
+  background-image: url(/images/twopinkdumbells.webp);
+  opacity: 0.95;
+  background-size: cover;
+}
+
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 50px;
+  background-color: rgb(185, 161, 169, 0.9);
+  border-radius: 10px;
+  border: 2px solid #5b4c64;
+}
+
+.exercise-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.exercise-btn {
+  width: 200px;
+}
+
+.update-btn {
+  width: 250px;
+  height: 50px;
 }

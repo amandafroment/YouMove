@@ -33,24 +33,24 @@
         </div>
         <div class="exercises-container">
           <% if (exercises.length) { %>
-          <table>
+          <table class="workout-show-table">
             <thead>
-              <tr>
+              <tr class="workout-tr-headers">
                 <th>EXERCISE</th>
                 <th>SETS</th>
                 <th>REPS</th>
-                <th>WEIGHTS USED</th>
+                <th>WEIGHTS (LB)</th>
                 <th>ADDITIONAL NOTES</th>
               </tr>
             </thead>
             <tbody>
               <% exercises.forEach(function(e){ %>
               <tr>
-                <td><%= e.name %></td>
+                <td class="left-corner-brdr"><%= e.name %></td>
                 <td><%= e.sets %></td>
                 <td><%= e.reps %></td>
                 <td><%= e.weights %></td>
-                <td><%= e.notes %></td>
+                <td class="notes"><%= e.notes %></td>
                 <td>
                   <form
                     action="/exercise/<%= e._id%>/<%= workout._id %>"
@@ -59,7 +59,7 @@
                     <button class="delete-btn" type="submit">DELETE</button>
                   </form>
                 </td>
-                <td>
+                <td class="right-corner-brdr">
                   <form
                     action="/exercise/edit/<%= e._id%>/<%= workout._id %>"
                     method="POST"
@@ -75,11 +75,18 @@
             </tbody>
           </table>
           <% } else { %>
-          <h5>No Exercises Yet</h5>
+          <h5>YOU DON'T HAVE ANY EXERCISES ADDED YET</h5>
+          <h5 class="bottom-h5">CLICK NEW EXERCISE BELOW TO ADD AN EXERCISE</h5>
+
           <% } %>
         </div>
         <button type="submit" class="new-exercise-btn">
-          <a href="/workout/<%= workout._id %>/exercise/new"> NEW EXERCISE</a>
+          <a
+            class="new-exercise-anchor"
+            href="/workout/<%= workout._id %>/exercise/new"
+          >
+            NEW EXERCISE</a
+          >
         </button>
       </div>
     </main>
