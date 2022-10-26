@@ -23,22 +23,24 @@
     </div>
     <main class="workout-show-page-main">
       <div class="workout-show-container">
-        <h1><%= workout.name %></h1>
-        <h2>
-          <% dateObj = new Date(workout.date) %> <%if (!isNaN(dateObj)) {%> <%=
-          dateObj.getUTCFullYear() %>/<%= dateObj.getUTCMonth() + 1%>/<%=
-          dateObj.getUTCDate()%> <% }%>
-        </h2>
+        <div class="workout-show-headers">
+          <h1><%= workout.name %></h1>
+          <h2 class="date-header">
+            <% dateObj = new Date(workout.date) %> <%if (!isNaN(dateObj)) {%>
+            <%= dateObj.getUTCFullYear() %>/<%= dateObj.getUTCMonth() + 1%>/<%=
+            dateObj.getUTCDate()%> <% }%>
+          </h2>
+        </div>
         <div class="exercises-container">
           <% if (exercises.length) { %>
           <table>
             <thead>
               <tr>
-                <th>Exercise</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Weights Used</th>
-                <th>Additional Notes</th>
+                <th>EXERCISE</th>
+                <th>SETS</th>
+                <th>REPS</th>
+                <th>WEIGHTS USED</th>
+                <th>ADDITIONAL NOTES</th>
               </tr>
             </thead>
             <tbody>
@@ -54,7 +56,7 @@
                     action="/exercise/<%= e._id%>/<%= workout._id %>"
                     method="POST"
                   >
-                    <button type="submit">Delete</button>
+                    <button type="submit">DELETE</button>
                   </form>
                 </td>
                 <td>
@@ -62,7 +64,7 @@
                     action="/exercise/edit/<%= e._id%>/<%= workout._id %>"
                     method="POST"
                   >
-                    <button type="submit">Edit Exercise</button>
+                    <button type="submit">EDIT</button>
                   </form>
                 </td>
               </tr>
@@ -73,12 +75,8 @@
           <h5>No Exercises Yet</h5>
           <% } %>
         </div>
-      </div>
-      <div>
-        <button type="submit" class="create-workout-btn">
-          <a href="/workout/<%= workout._id %>/exercise/new">
-            Add An Exercise</a
-          >
+        <button type="submit" class="new-exercise-btn">
+          <a href="/workout/<%= workout._id %>/exercise/new"> NEW EXERCISE</a>
         </button>
       </div>
     </main>

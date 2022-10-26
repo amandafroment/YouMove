@@ -273,6 +273,30 @@ button:hover {
 }
 
 .workout-show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 70%;
   background-color: white;
+}
+
+.workout-show-headers {
+  display: flex;
+  flex-direction: row;
+  /* align-items: baseline; */
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  font-size: 15px;
+  height: 60px;
+  width: 40%;
+  background-color: #b589ab;
+  border-radius: 10px;
+  color: #5b4c64;
+  border: 2px solid #5b4c64;
+}
+
+.new-exercise-btn {
+  align-self: center;
 }
