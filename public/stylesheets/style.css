@@ -493,8 +493,6 @@ h5 {
   height: 100%;
   width: 100%;
   background-image: url("/images/workout1.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .workouts-container {
@@ -505,7 +503,6 @@ h5 {
 .workouts-center-div {
   height: 50%;
   width: 50%;
-  border-radius: 10px;
   padding: 10px;
 }
 
@@ -515,22 +512,11 @@ table {
 }
 
 table td {
-  background-color: #5b4c64;
   padding: 15px 20px;
 }
 
 .spacer td {
   padding: 2px 20px;
-}
-
-.left-corner-brdr {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.right-corner-brdr {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .workout-anchor {
@@ -553,12 +539,15 @@ table td {
 
 .new-workout-container {
   width: 100%;
-  height: 50%;
+  height: 60%;
+  position: relative;
+  bottom: 0;
+  z-index: inherit;
 }
 
 .create-workout-center-div {
-  height: 50%;
-  width: 50%;
+  height: 60%;
+  width: 70%;
   background-color: rgb(185, 161, 169, 0.9);
   border-radius: 25px;
   padding: 15px;
@@ -566,7 +555,7 @@ table td {
 
 .workout-header {
   font-size: 20px;
-  /* height: 75px; this isn't working */
+  height: 75px;
   width: 175px;
   background-color: #b589ab;
   opacity: 1;
@@ -582,22 +571,14 @@ table td {
 label {
   font-size: 20px;
   margin: 10px;
-  text-align: center;
   font-weight: 600;
   color: #5b4c64;
 }
 
 input {
-  width: 50%;
-  padding: 10px 0px;
+  width: 60%;
+  padding: 10px 5px;
   margin: 8px 0;
-  text-align: center;
-  font-size: 18px;
-  resize: none;
-  background-color: #f7f1f5;
-  color: #5b4c64;
-  border: 2px solid #5b4c64;
-  text-transform: uppercase;
 }
 
 .date {
@@ -605,13 +586,7 @@ input {
 }
 
 .create-workout-btn {
-  font-size: 22px;
-  width: 50%;
+  font-size: 18px;
+  width: 35%;
   height: 45px;
-  margin-top: 10px;
-  align-self: center;
-  border-radius: 10px;
-  background-color: #5b4c64;
-  color: #ecd5e6;
-  border: 0px;
 }
