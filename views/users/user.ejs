@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <div class="navbar-fixed">
-      <nav>
+    <div class="navbar-fixed navbar-fixed-user">
+      <nav class="user-nav">
         <h1 class="logo">YOUMOVE</h1>
         <a href="" class="workout-nav">WORKOUTS</a>
-        <ul class="right">
+        <ul class="right logout-nav">
           <li>
             <% if (user) { %>
             <a href="/logout">LOG OUT</a>
