@@ -1,7 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0px;
-  /* background-color: #6d738e; */
   height: 100%;
 }
 
@@ -401,4 +400,77 @@ h5 {
 .update-btn {
   width: 250px;
   height: 50px;
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+  .index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 105%;
+    background-color: #b589ab;
+    background-image: url("/images/bwdbyoga.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .index-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding: 25px;
+    height: 25%;
+    width: 50%;
+    margin: 0px;
+    background-color: rgb(185, 161, 169, 0.95);
+  }
+
+  .first-paragraph {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .second-paragraph {
+    display: none;
+  }
+
+  .navbar-fixed {
+    background-color: #ecd5e6;
+    height: 10%;
+    width: 105%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 25px;
+    color: #b589ab;
+  }
+
+  a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #b589ab;
+  }
+
+  .right a {
+    margin-right: 55px;
+    font-size: 13px;
+  }
 }
