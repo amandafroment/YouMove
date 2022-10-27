@@ -11,13 +11,15 @@
     <div class="navbar-fixed">
       <nav>
         <h1 class="logo">YOUMOVE</h1>
-        <a href="/users" class="">WORKOUTS</a>
-        <ul class="right"></ul>
+        <a href="/users" class="workout-nav">WORKOUTS</a>
+        <ul class="right index-right"></ul>
       </nav>
     </div>
     <div class="new-exercise-container">
       <div class="exercise-form">
-        <h2 class="header">EDIT <%= exercise.name %></h2>
+        <h2 class="header edit-header exercise-header">
+          EDIT <%= exercise.name %>
+        </h2>
         <form
           class="form"
           action="/exercise/workout/<%=eid%>/<%= id %>/exercise"
@@ -50,8 +52,13 @@
             name="weights"
             value="<%= exercise.weights %>"
           />
-          <label>ADDITIONAL NOTES </label
-          ><input type="text" name="notes" value="<%= exercise.notes %>" />
+          <label class="notes">ADDITIONAL NOTES </label
+          ><input
+            class="notes"
+            type="text"
+            name="notes"
+            value="<%= exercise.notes %>"
+          />
 
           <button type="submit" class="create-workout-btn update-btn">
             UPDATE EXERCISE

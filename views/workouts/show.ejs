@@ -11,8 +11,8 @@
     <div class="navbar-fixed">
       <nav>
         <h1 class="logo">YOUMOVE</h1>
-        <a href="/users" class="">WORKOUTS</a>
-        <ul class="right">
+        <a href="/users" class="workout-nav">WORKOUTS</a>
+        <ul class="right index-right">
           <li>
             <% if (user) { %>
             <a href="/logout">LOG OUT</a>
@@ -40,7 +40,7 @@
                 <th>SETS</th>
                 <th>REPS</th>
                 <th>WEIGHTS (LB)</th>
-                <th>ADDITIONAL NOTES</th>
+                <th class="notes">NOTES</th>
               </tr>
             </thead>
             <tbody>

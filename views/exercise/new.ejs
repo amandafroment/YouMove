@@ -11,8 +11,8 @@
     <div class="navbar-fixed">
       <nav>
         <h1 class="logo">YOUMOVE</h1>
-        <a href="/users" class="">WORKOUTS</a>
-        <ul class="right">
+        <a href="/users" class="workout-nav">WORKOUTS</a>
+        <ul class="right index-right">
           <li>
             <% if (user) { %>
             <a href="/logout">LOG OUT</a>
@@ -23,7 +23,7 @@
     </div>
     <div class="new-exercise-container">
       <div class="exercise-form">
-        <h2 class="header">NEW EXERCISE</h2>
+        <h2 class="header exercise-header">NEW EXERCISE</h2>
         <form
           class="form exercise-new"
           method="POST"
@@ -33,7 +33,8 @@
           <label>SETS </label><input type="number" name="sets" required />
           <label>REPS </label><input type="number" name="reps" required />
           <label>WEIGHTS (LB) </label><input type="number" name="weights" />
-          <label>ADDITIONAL NOTES </label><input type="text" name="notes" />
+          <label class="notes">ADDITIONAL NOTES </label
+          ><input type="text" class="notes" name="notes" />
 
           <button type="submit" class="create-workout-btn exercise-btn">
             ADD EXERCISE
